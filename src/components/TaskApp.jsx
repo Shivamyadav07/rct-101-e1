@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import styles from "./taskApp.module.css";
 import TaskHeader from "./TaskHeader/TaskHeader";
-import Tasks from "./Tasks/Tasks";
+import { Tasks } from "./Tasks";
 
 const TaskApp = () => {
   const [task, settask] = useState("");
@@ -12,11 +12,8 @@ const TaskApp = () => {
   return (
     <div data-cy="task-app" className={styles.taskApp}>
       <TaskHeader />
-      <AddTask settask={settask} task={task} tasklist={tasklist} settasklist={settasklist}  />
-      {tasklist.map(e => {
-        return (<Tasks />)
-      })}
-
+      <AddTask settask={settask} task={task} tasklist={tasklist} settasklist={settasklist} />
+      <Tasks tasklist={tasklist} />
     </div>
   );
 };
