@@ -7,9 +7,9 @@ const Task = () => {
   return (
     <li data-cy="task" className={styles.task}>
       <input type="checkbox" data-cy="task-checkbox" />
-      <div data-cy="task-text"></div>
+      <div data-cy="task-text">mydata</div>
       <Counter />
-      <button data-cy="task-remove-button"></button>
+      <button data-cy="task-remove-button">Remove</button>
     </li>
   );
 };
